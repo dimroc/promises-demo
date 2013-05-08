@@ -9,3 +9,14 @@ var getDataOfDoom = function() {
     });
   });
 };
+
+
+var getDataOfDoomParallel = function() {
+  var handler = function(data, textStatus, jqXHR) {
+    alert("We have success! But what if we had a failure?");
+  };
+
+  $.get("/data/file1.json", handler);
+  $.get("/data/file2.json", handler);
+  $.get("/data/file3.json", handler);
+};
