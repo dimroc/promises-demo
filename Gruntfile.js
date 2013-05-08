@@ -18,6 +18,21 @@ module.exports = function(grunt) {
           base: 'www'
         }
       }
+    },
+
+    concat: {
+      options: {
+        stripBanners: true
+      },
+      dist: {
+        src:
+          [
+            'components/jquery/jquery.js',
+            'components/underscore/underscore.js',
+            'components/underscore.string/dist/underscore.string.min.js',
+        ],
+        dest: 'www/vendor.js'
+      }
     }
   });
 
@@ -29,6 +44,7 @@ module.exports = function(grunt) {
 
   // Default task(s).
   grunt.registerTask('default', [
+                     'concat',
                      'livereload-start',
                      'connect',
                      'regarde'
