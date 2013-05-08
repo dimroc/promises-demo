@@ -30,6 +30,7 @@ module.exports = function(grunt) {
             'components/jquery/jquery.js',
             'components/underscore/underscore.js',
             'components/underscore.string/dist/underscore.string.min.js',
+            'components/async/lib/async.js',
         ],
         dest: 'www/vendor.js'
       }

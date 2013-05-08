@@ -1,10 +1,8 @@
 // http://api.jquery.com/category/deferred-object/
 
-window.demo = window.demo || {};
-
 $(function() {
-  var dfd = demo.dfd = $.Deferred();
-  var promise = demo.promise = dfd.promise();
+  window.dfd = $.Deferred();
+  window.promise = dfd.promise();
 
   // A deferred is also a promise.
   // If anything a promise is a facade of a deferred with a smaller

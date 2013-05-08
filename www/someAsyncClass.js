@@ -1,3 +1,5 @@
+window.demo = window.demo || {};
+
 $(function() {
   window.SomeAsyncClass = function() {
     this._dfd = $.Deferred();
@@ -5,7 +7,7 @@ $(function() {
 
   _.extend(window.SomeAsyncClass.prototype, {
 
-    fetch: function() {
+    update: function() {
       var that = this;
 
       setInterval(
