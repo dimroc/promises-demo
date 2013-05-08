@@ -2,7 +2,7 @@
 
 Javascript code snippets illustrating jQuery Promises
 
-```
+```js
 var getDataOfPromiseParallel = function() {
   var promise1 = $.get("/data/file1.json");
   var promise2 = $.get("/data/file2.json");
@@ -10,11 +10,9 @@ var getDataOfPromiseParallel = function() {
 
   // http://api.jquery.com/jQuery.when/
 
-  $.when(promise1, promise2, promise3).then(function() {
-    alert("We have success!");
-  }, function() {
-    alert("We have a centralized failure handler!");
-  });
+  $.when(promise1, promise2, promise3)
+    .then(function() { alert("We have success!"); }, 
+          function() { alert("We have a centralized failure handler!"); });
 };
 
 ```
