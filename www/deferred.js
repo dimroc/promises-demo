@@ -11,5 +11,8 @@ $(function() {
   promise.done(function() { alert("Your promise is done (kept)!"); });
   promise.fail(function() { alert("You broke your promise!"); });
   promise.always(function() { alert("Still going no matter what"); });
+
+  // dfd.resolve();
+  // dfd.reject();
 });
 
